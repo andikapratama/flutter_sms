@@ -131,7 +131,7 @@ class FlutterSmsPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
     val intent = Intent(Intent.ACTION_SENDTO)
     intent.data = Uri.parse("smsto:$phones")
     intent.putExtra("sms_body", message)
-    intent.putExtra(Intent.EXTRA_TEXT, message)
+//    intent.putExtra(Intent.EXTRA_TEXT, message)
     activity?.startActivityForResult(intent, REQUEST_CODE_SEND_SMS)
     result.success("SMS Sent!")
   }
